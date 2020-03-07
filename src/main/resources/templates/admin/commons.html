@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--  头部 head 标签 -->
+<head th:fragment="head">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Rain Blog | Admin</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" th:href="@{/admin/plugins/bootstrap/css/bootstrap.min.css}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" th:href="@{/admin/dist/css/font-awesome.min.css}">
+    <!-- Ionicons -->
+    <link rel="stylesheet" th:href="@{/admin/dist/css/ionicons.min.css}">
+    <!-- Theme style -->
+    <link rel="stylesheet" th:href="@{/admin/dist/css/AdminLTE.min.css}">
+    <link rel="stylesheet" th:href="@{/admin/dist/css/skin-purple.min.css}">
+    <!-- Google Font -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+
+<!-- 顶部标题栏  -->
+<header class="main-header" th:fragment="main-header">
+    <!-- Logo -->
+    <a th:href="@{/}" class="logo">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini"><b>R</b>ain</span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg"><b>Rain</b>'Blog</span>
+    </a>
+
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+            <span class="sr-only">Toggle navigation</span>
+        </a>
+        <!-- Navbar Right Menu -->
+        <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+                <!-- User Account Menu -->
+                <li class="dropdown user user-menu">
+                    <!-- Menu Toggle Button -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <!-- The user image in the navbar-->
+                        <img th:src="@{/admin/dist/img/user3-128x128.jpg}" class="user-image" alt="User Image">
+                        <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                        <span class="hidden-xs">Ep流苏</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- The user image in the menu -->
+                        <li class="user-header">
+                            <img th:src="@{/admin/dist/img/user3-128x128.jpg}" class="img-circle" alt="User Image">
+                            <p>
+                                缓慢而坚定地做自己力所能及的事
+                                <small>2019-12-22</small>
+                            </p>
+                        </li>
+                        <!-- Menu Footer-->
+                        <li class="user-footer">
+                            <div class="pull-left">
+                                <a href="#" class="btn btn-default btn-flat">Profile</a>
+                            </div>
+                            <div class="pull-right">
+                                <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Control Sidebar Toggle Button -->
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!-- 侧边栏 -->
+<aside class="main-sidebar" th:fragment="main-sidebar">
+
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel">
+            <div class="pull-left image">
+                <img th:src="@{/admin/dist/img/user3-128x128.jpg}" class="img-circle" alt="User Image">
+            </div>
+            <div class="pull-left info">
+                <p>Ep流苏</p>
+                <!-- Status -->
+                <a href="#"><i class="fa fa-circle text-success"></i> 持之以恒</a>
+            </div>
+        </div>
+        <!-- Sidebar Menu -->
+        <ul class="sidebar-menu" data-widget="tree">
+            <li class="header">Dashboard</li>
+            <!-- Optionally, you can add icons to the links -->
+            <li class="active"><a href="#"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+            <li><a href="#"><i class="fa fa-pencil-square-o"></i> <span>发表博客</span></a></li>
+
+            <li class="header">站点管理</li>
+            <li><a href="#"><i class="fa fa-list-alt"></i> <span>文章管理</span></a></li>
+            <li><a href="#"><i class="fa fa-comments"></i> <span>评论管理</span></a></li>
+            <li><a href="#"><i class="fa fa-bookmark"></i> <span>分类管理</span></a></li>
+            <li><a href="#"><i class="fa fa-tags"></i> <span>标签管理</span></a></li>
+            <li><a href="#"><i class="fa fa-link"></i> <span>友情链接</span></a></li>
+        </ul>
+        <!-- /.sidebar-menu -->
+    </section>
+    <!-- /.sidebar -->
+</aside>
+
+<!-- 底部信息栏 -->
+<footer class="main-footer" th:fragment="main-footer">
+    <!-- To the right -->
+    <div class="pull-right hidden-xs">
+        缓慢而坚定地做你力所能及的事。
+    </div>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2019 <a href="#">Ep流苏</a>.</strong> All rights reserved.
+</footer>
+</html>
