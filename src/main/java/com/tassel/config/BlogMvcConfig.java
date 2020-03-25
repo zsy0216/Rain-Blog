@@ -5,9 +5,9 @@ import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
- * Created By Ep流苏
  * Date: 2019/12/22 10:44
  * Description: spring-mvc的扩展配置类
+ * @author Ep流苏
  */
 @Configuration
 public class BlogMvcConfig implements WebMvcConfigurer {
