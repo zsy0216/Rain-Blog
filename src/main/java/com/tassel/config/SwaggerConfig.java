@@ -27,8 +27,6 @@ public class SwaggerConfig {
 				.apis(RequestHandlerSelectors.basePackage("com.tassel"))
 				.paths(PathSelectors.any())
 				.build();
-
-
 	}
 
 	private ApiInfo apiInfo() {
