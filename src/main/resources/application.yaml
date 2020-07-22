@@ -1,8 +1,10 @@
 server:
   port: 623
+  servlet:
+    context-path: mock
 
 spring:
   banner:
     location: classpath:public/banner.txt
   thymeleaf:
-      cache: false
+    cache: false
