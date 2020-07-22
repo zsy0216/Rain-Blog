@@ -1,7 +1,7 @@
 server:
   port: 623
-  servlet:
-    context-path: mock
+#  servlet:
+#    context-path: /blog
 
 spring:
   banner:
