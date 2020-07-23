@@ -1,51 +1,70 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="~{admin/commons::head}"/>
-<title> 听雨轩 </title>
-<body class="hold-transition skin-purple sidebar-mini">
+<title>Rain | Dashboard</title>
+
+<body class="hold-transition sidebar-mini">
 <div class="wrapper">
-  <!-- Main Header -->
-  <header th:replace="~{admin/commons::main-header}"></header>
-  <!-- Left side column. contains the logo and sidebar -->
-  <aside th:replace="~{admin/commons::main-sidebar}"></aside>
+  <!-- Main Header Nav and Sidebar -->
+  <header th:replace="~{admin/commons::site-nav}"></header>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1>
-        Page Header
-        <small>Optional description</small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-        <li class="active">Here</li>
-      </ol>
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Dashboard</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+              <li class="breadcrumb-item active">Dashboard</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
     </section>
 
     <!-- Main content -->
-    <section class="content container-fluid">
+    <section class="content">
 
-      <!--------------------------
-        | Your Page Content Here |
-        -------------------------->
+      <!-- Default box -->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Title</h3>
+
+          <div class="card-tools">
+            <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip"
+                    title="Collapse">
+              <i class="fas fa-minus"></i></button>
+            <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
+              <i class="fas fa-times"></i></button>
+          </div>
+        </div>
+        <div class="card-body">
+          Start creating your amazing application!
+        </div>
+        <!-- /.card-body -->
+        <div class="card-footer">
+          Footer
+        </div>
+        <!-- /.card-footer-->
+      </div>
+      <!-- /.card -->
 
     </section>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
 
+
   <!-- Main Footer -->
-  <footer th:replace="~{admin/commons::main-footer}"></footer>
+  <footer th:replace="~{admin/commons::footer}"></footer>
 </div>
 <!-- ./wrapper -->
 
-<!-- REQUIRED JS SCRIPTS -->
-<!-- jQuery 3 -->
-<script th:src="@{/admin/plugins/jquery/js/jquery.min.js}"></script>
-<!-- Bootstrap 3.3.7 -->
-<script th:src="@{/admin/plugins/bootstrap/js/bootstrap.min.js}"></script>
-<!-- AdminLTE App -->
-<script th:src="@{/admin/dist/js/adminlte.min.js}"></script>
+<div th:replace="~{admin/commons::common-js}"></div>
 </body>
 </html>
