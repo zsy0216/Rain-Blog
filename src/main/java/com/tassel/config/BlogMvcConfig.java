@@ -23,5 +23,7 @@ public class BlogMvcConfig implements WebMvcConfigurer {
 		 * 后台视图页面跳转
 		 */
 		registry.addViewController("/").setViewName("admin/index");
+		registry.addViewController("/index").setViewName("admin/index");
+		registry.addViewController("/404").setViewName("error/404");
 	}
 }

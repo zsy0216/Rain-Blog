@@ -59,7 +59,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a th:href="@{/}" class="nav-link active">
+            <a th:href="@{/}" th:class="${active=='/'?'nav-link active':'nav-link'}">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -67,7 +67,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="../widgets.html" class="nav-link">
+            <a th:href="@{/404}" th:class="${active=='404'?'nav-link active':'nav-link'}">
               <i class="nav-icon fas fa-pencil-alt"></i>
               <p>
                 Post
@@ -124,7 +124,6 @@
   </aside>
 </div>
 
-
 <!-- 底部信息栏 -->
 <footer class="main-footer text-sm" th:fragment="footer">
   <!-- To the right -->
@@ -133,7 +132,7 @@
   </div>
   <!-- Default to the left -->
   <strong>Copyright &copy; 2019 <a href="https://www.github.com/zsy0216" target="_blank">Ep流苏</a>.</strong> All rights
-  reserved. <a href="http://adminlte.io">AdminLTE.io</a>.
+  reserved. <a href="http://adminlte.io" target="_blank">AdminLTE.io</a>.
 </footer>
 
 <div th:fragment="common-js">
